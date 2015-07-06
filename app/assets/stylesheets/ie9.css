@@ -11,11 +11,9 @@
 	input[type="reset"],
 	button,
 	.button {
-		background-image: url("images/ie/grad0-20.svg");
 	}
 
 /* List */
 
 	ul.social li a:before {
-		background-image: url("images/ie/grad0-20.svg");
 	}
