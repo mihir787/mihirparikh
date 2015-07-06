@@ -1,0 +1,23 @@
+<div class="container wrapper first" id="top">
+
+<h1>Edit Blog Post</h1>
+<%= form_for(@blog, url: blog_path, method: "PUT") do |f| %>
+  <ul>
+  <% @blog.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body%>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+</div>
+</div>

@@ -1,0 +1,127 @@
+
+		<!-- Home -->
+			<div class="wrapper style1 first">
+				<article class="container" id="top">
+					<div class="row">
+						<div class="4u 12u(mobile)">
+							<span class="image fit"><%= image_tag "mihir_parikh.jpg" %></span>
+						</div>
+						<div class="8u 12u(mobile)">
+							<header>
+								<h1>Hi. I'm <strong>Mihir Parikh</strong>.</h1>
+							</header>
+							<a href="/about_me" class="button big scrolly">More About Me</a>
+						</div>
+					</div>
+				</article>
+			</div>
+
+		<!-- recent blog post -->
+			<div class="wrapper style2">
+				<article id="work">
+					<header>
+						<h1>Most Recent Blog Post</h1>
+					</header>
+					<div class="container">
+					  <h2><%= @blog.title %></h1>
+					  <p><%= @blog.body.html_safe %></p>
+					</div>
+				</article>
+			</div>
+
+		<!-- Portfolio -->
+		<div class="wrapper style2">
+			<article id="work">
+				<header>
+					<h2>Recent Projects</h2>
+				</header>
+				<div class="container">
+					<div class="row">
+						<div class="grid">
+							<section class="box style1">
+								<%= link_to image_tag("bizzspot.png", class:"projectimg"), "http://bizzspot.herokuapp.com/", target: "_blank" %>
+								<h3>BizzSpot</h3>
+								<p>Aggregates and visualizes demographic data and accessability of a given location.</p>
+							</section>
+						</div>
+						<div class="grid">
+							<section class="box style1">
+								<%= link_to image_tag("marvelus.png", class:"projectimg"), "http://marvel-us.herokuapp.com/", target: "_blank" %>
+								<h3>Marvelus.us</h3>
+								<p>Analyzes tweets to match users with a superhero.</p>
+							</section>
+						</div>
+					</div>
+					<div class="row">
+						<div class="grid">
+							<section class="box style1">
+								<%= link_to image_tag("hipsterbytes.png", class:"projectimg"), "http://hipsterbytes.herokuapp.com/", target: "_blank" %>
+								<h3>Hipster Bytes</h3>
+								<p>E-commerce site: select items, add to cart, and checkout.</p>
+							</section>
+						</div>
+						<div class="grid">
+							<section class="box style1">
+								<%= link_to image_tag("phonatics.png", class:"projectimg"), "http://phonatic.herokuapp.com/", target: "_blank" %>
+								<h3>Phonatics</h3>
+								<p>Pivoted Hipster Bytes into a multi-tenant stock photography site.</p>
+							</section>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<!-- Contact -->
+			<div class="wrapper style4">
+				<article id="contact" class="container 75%">
+					<header>
+						<h2>Contact Me</h2>
+					</header>
+					<div>
+						<div class="row">
+							<div class="12u">
+								<form action="/email" method="post">
+									<div>
+										<div class="row">
+											<div class="6u 12u(mobile)">
+												<input type="text" name="name" id="name" placeholder="Name" />
+											</div>
+											<div class="6u 12u(mobile)">
+												<input type="text" name="email" id="email" placeholder="Email" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="12u">
+												<input type="text" name="subject" id="subject" placeholder="Subject" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="12u">
+												<textarea name="message" id="message" placeholder="Message"></textarea>
+											</div>
+										</div>
+										<div class="row 200%">
+											<div class="12u">
+												<ul class="actions">
+													<li><input type="submit" value="Send Message" /></li>
+													<li><input type="reset" value="Clear Form" class="alt" /></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>

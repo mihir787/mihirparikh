@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mihirparikh</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+
+<body>
+  <nav id="nav">
+    <ul class="container">
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Previous Blog Posts", blogs_path %></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><%= link_to "My GitHub", 'https://github.com/mihir787', target: "_blank"%></li>
+      <li><%= link_to "LinkedIn", 'https://www.linkedin.com/in/mihirsparikh', target: "_blank"%></li>
+      <% if current_user %>
+        <li><%= link_to "Logout", logout_path, method: 'DELETE' %></li>
+      <% end %>
+    </ul>
+  </nav>
+
+  <div class="flashes">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+  </div>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<div class="container blogpage">
+<% @blogs.each do |blog| %>
+  <div class="blogitem">
+    <h2><%= blog.title %></h2>
+    <p class="blogbody"><%= blog.body.html_safe %></p>
+    <% if current_user %>
+      <p class="blogbody"><%= link_to "Edit Blog", edit_blog_path(blog), method: "get" %></p>
+    <% end %>
+  </div>
+<% end %>
+</div>
