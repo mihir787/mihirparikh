@@ -13,7 +13,7 @@ class BlogsController < ApplicationController
   end
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all.reverse
   end
 
   def edit
